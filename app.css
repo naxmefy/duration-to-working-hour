@@ -1,0 +1,31 @@
+[ng-cloak] {
+    display: none;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+md-icon.md-18 {
+    font-size: 18px; 
+}
+
+md-icon.md-24 {
+    font-size: 24px; 
+}
+
+md-icon.md-36 {
+    font-size: 36px; 
+}
+
+md-icon.md-48 {
+    font-size: 48px; 
+}

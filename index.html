@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Duration to working hours</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.css">
+    <!-- App -->
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body layout="column" ng-cloak>
+
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2 flex md-truncate>Duration to working hours</h2>
+
+            <md-button class="md-icon-button" aria-label="Github">
+                <!--<md-icon md-font-library="material-icons">github</md-icon>-->
+                <md-icon md-font-icon="fa-github" class="fa md-36" alt="github"></md-icon>
+            </md-button>
+
+            <!--<md-button class="md-icon-button" aria-label="More">
+                    <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+                </md-button>-->
+        </div>
+    </md-toolbar>
+
+    <md-content flex id="content" class="md-whiteframe-4dp">
+    </md-content>
+
+    <md-content>
+        <form name="appForm">
+            <md-input-container class="md-block">
+                <label>Duration</label>
+                <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The description must be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
+
+            <md-input-container class="md-block">
+                <label>Working Hour</label>
+                <input md-maxlength="30" required md-no-asterisk name="description" ng-model="project.description">
+                <div ng-messages="projectForm.description.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The description must be less than 30 characters long.</div>
+                </div>
+            </md-input-container>
+
+        </form>
+    </md-content>
+
+
+    <!--<div class="container" ng-controller="AppController as app">
+
+        <div class="row">
+            <form class="" role="form" name="appForm">
+                <div class="col-md-6" ng-class="{'has-error':appForm.duration.$error, asd: appForm.duration.$valid}">
+                    <h3 class="text-center">Duration (hh:mm)</h3>
+                    <input type="text" name="duration" class="form-control" placeholder="e.g.: 8:30" ng-model="app.duration" ng-pattern="app.durationRegEx"
+                        ng-change="app.sync()">
+                </div>
+                <div class="col-md-6" ng-class="{'has-error':appForm.workingHour.$error}">
+                    <h3 class="text-center">Working Hour (0.00)</h3>
+                    <input type="number" name="workingHour" class="form-control" placeholder="e.g.: 8.5" ng-model="app.workingHour" ng-pattern="app.workingHourRegEx"
+                        ng-change="app.sync()">
+                </div>
+            </form>
+        </div>
+    </div>-->
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-aria.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
